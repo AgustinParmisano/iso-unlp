@@ -1,0 +1,8 @@
+echo cadena >> ./archivo.txt
+cadena=`./archivo`
+echo cadena > archivo
+(( expresion ))
+$(./archivo)
+echo cadena|grep archivo
+[ expresion ]
+echo $(( expresion ))

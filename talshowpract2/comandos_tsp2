@@ -1,0 +1,13 @@
+systemctl get-default #para obtener el target por defecto
+systemctl list-units --type target #para ver los targets que hay
+systemctl list-units --type target | grep graph #para ver el target5 o runvelel5 (que es el por defecto)
+ls -l /lib/systemd/system/runlevel* #para ver que el runlevel5 o target5 es un link simbolico al target graphical o target5 
+
+systemctl status graphical.target # para ver el estado del servicio/demonio graphical.target
+systemctl status NetworkManager.service # para ver el estado del servici/demonio de red
+
+ping 8.8.8.8
+
+systemctl stop NetworkManager.service
+systemctl start NetworkManager.service
+ 
