@@ -16,6 +16,7 @@ function existe {
       return 0
     fi
   done
+  echo "El usuario $1 no existe"
   return 1
 }
 
@@ -48,11 +49,50 @@ function usuarios {
   done
 }
 
-usuarios
-cantidad
-usuariosConPatron o
-existe user
-eliminarUsuario user
-usuarios
-cantidad
-usuariosConPatron er
+opciones="1:existe <usuario>, 2:eliminar <usuario>, 3:usuariosConPatron <patron>, 4:cantidad, 5:usuarios, 0:salir"
+
+while [[ true ]]; do
+  echo "Las opciones son:"
+  echo $opciones
+  #aprender a usar el select opcion in $opciones; do
+  read opcion
+  case "$opcion" in
+    "existe"|"1")
+      echo "Ingrese usuario: "
+      read usuario
+      existe $usuario
+      ;;
+    "eliminar"|"2")
+      echo "Ingrese usuario: "
+      read usuario
+      eliminarUsuario $usuario
+      ;;
+    "usuariosConPatron"|"3")
+      echo "Ingrese patron: "
+      read patron
+      usuariosConPatron $patron
+      ;;
+    "cantidad"|"4")
+      cantidad
+      ;;
+    "usuarios"|"5")
+      usuarios
+      ;;
+    "salir"|"0")
+      echo "Saliendo"
+      exit 0
+      ;;
+    "*" )
+      echo "Las opciones son:"
+      echo $opciones
+      ;;
+  esac
+done
+#usuarios
+#cantidad
+#usuariosConPatron o
+#existe user
+#eliminarUsuario user
+#usuarios
+#cantidad
+#usuariosConPatron er
