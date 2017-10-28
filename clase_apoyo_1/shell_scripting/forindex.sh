@@ -10,7 +10,12 @@ function imprimirVal {
 	done
 }
 
-imprimirVal
+
+#imprimirVal
+for i in ${valores[*]}; do
+	echo "Valor es $i"
+done
+
 exit 0
 
 
