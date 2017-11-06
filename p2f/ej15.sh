@@ -9,7 +9,8 @@ if [ $1 == "c" ]; then
   echo "Ingrese el valor de la temperatura para convertir a Celsius"
   read numero
   echo "El número ingresado es $numero"
-  aux=$((5 * ($numero - 32) / 9)) #como sería com expr?
+  #aux=$((5 * ($numero - 32) / 9)) #como sería com expr?
+  aux=$(expr 3 \* \( $numero + 1 \) / 9)
   echo "La temperatura es $aux C"
 fi
 
