@@ -1,0 +1,116 @@
+   20  cat /etc/passwd | cut -d: -f1 | grep -w $1 | wc -l
+   21  cat /etc/passwd | cut -d: -f1 | grep -w $user | wc -l
+   22  user=user1
+   23  cat /etc/passwd | cut -d: -f1 | grep -w $user | wc -l
+   24  cat /etc/passwd | cut -d: -f1 
+   25  cat /etc/passwd | cut -d: -f1 | grep -w $user
+   26  wc -l /etc/passwd
+   27  wc -c /etc/passwd
+   28  ls -l /etc/passwd
+   29  wc -l /etc/passwd
+   30  cat /etc/passwd | cut -d: -f1 | grep -w $user
+   31  cat /etc/passwd | cut -d: -f1 | grep -w $user | wc -l
+   32  who | cut -d' ' -f1 | grep $1 | wc -l
+   33  who | cut -d' ' -f1 | grep $user | wc -l
+   34  who
+   35  who | cut -d' ' -f1
+   36  who | cut -d' ' -f1 | grep $user | wc -l
+   37  who | cut -d' ' -f1 | grep $user
+   38  who | cut -d' ' -f1 | grep $user | wc -l
+   39  user2=user2
+   40  who | cut -d' ' -f1 | grep $user2 | wc -l
+   41  who | cut -d' ' -f1
+   42  who | grep $user2 | cut -d' ' -f1
+   43  who | grep $user1 | cut -d' ' -f1
+   44  who | grep $user1
+   45  who | grep $user
+   46  who | grep $user | cut -d' ' -f1
+   47  cat /etc/passwd | cut -d: -f1 | grep -w $user
+   48  cat /etc/passwd | cut -d: -f1
+   49  cat /etc/passwd | grep $user
+   50  user3=sh
+   51  cat /etc/passwd | grep $user3
+   52  cat /etc/passwd | grep $user3 | cut -d: -f1
+   53  cat /etc/passwd | cut -d: -f1 
+   54  cat /etc/passwd | cut -d: -f1 | grep $user3
+   55  cat /etc/passwd | cut -d: -f1 | grep -e $user3
+   56  cat /etc/passwd | cut -d: -f1 | grep -i $user3
+   57  grep --help
+   58  grep --help | grep exact
+   59  cat /etc/passwd | cut -d: -f1 | grep -o $user3
+   60  grep --help
+   61  cat /etc/passwd | cut -d: -f1 | grep -w $user3
+   62  cat /etc/passwd | cut -d: -f1 | grep $user3
+   63  cat /etc/passwd | cut -d: -f1 | grep -w $user3
+   64  ls
+   65  cat script1
+   66  echo "HOla" | tr a-zA-Z A-Za-z
+   67  echo "2" | tr '^[0-9]+$'
+   68  echo "2" | tr ^[0-9]+$
+   69  echo "2" | tr [0-9]+
+   70  echo "2" | tr [0-9]
+   71  echo "2" | tr 0-9
+   72  echo 2 | tr 0-9
+   73  echo 2 | tr [0-9]
+   74  echo 2 | tr ^[0-9]+([.][0-9]+)?$
+   75  echo 2 | tr "^[0-9]+([.][0-9]+)?$"
+   76  echo "password" | tr a-nA-N m-zM-Z
+   77  echo "password" | tr a-nA-N n-zN-Z
+   78  echo "pnssworq" | tr a-nA-N n-zN-Z
+   79  echo "pnssworq" | tr a-nA-N m-zM-Z
+   80  echo "iRsroR RersR gRerRnrRiRarlR" | tr -dc rR
+   81  echo "iRsroR RersR gRerRnrRiRarlR" | tr -c rR
+   82  echo "iRsroR RersR gRerRnrRiRarlR" | tr -c rR 
+   83  echo "iRsroR RersR gRerRnrRiRarlR" | tr -c rR " "
+   84  echo "iRsroR RersR gRerRnrRiRarlR" | tr -c r " "
+   85  echo "iRsroR RersR gRerRnrRiRarlR" | tr -d r " "
+   86  echo "iRsroR RersR gRerRnrRiRarlR" | tr -d r
+   87  echo "iRsroR RersR gRerRnrRiRarlR" | tr -d rR
+   88  ps -aux
+   89  ps -aux | head
+   90  ps -aux | head -5
+   91  ps -aux | tail -5
+   92  ps -aux
+   93  ps -aux | grep user1
+   94  ps -aux | grep user1 | cut -d" " -f11
+   95  ps -aux | grep user1 | cut -d" " -f12
+   96  ps -aux | grep user1 | cut -d" " -f13
+   97  ps -aux | grep user1 | cut -d" " -f14
+   98  ps -aux | grep user1 | cut -d" " -f145
+   99  ps -aux | grep user1 | cut -d" " -f146
+  100  ps -aux | grep user1 | cut -d" " -f15
+  101  ps -aux | grep user1 | cut -d" " -f16
+  102  ps -aux | grep user1 | cut -d" " -f17
+  103  ps -aux | grep user1 | cut -d" " -f18
+  104  ps -aux | grep user1 | cut -d" " -f19
+  105  ps -aux | head
+  106  ps -aux | grep user1 | cut -d" " -f19
+  107  ps -aux | grep user1 | cut -d" " -f19 | head
+  108  ps -aux | head
+  109  ps -aux | grep user1 | cut -d"  " -f19 | head
+  110  ps -aux | grep user1 | cut -d"17" -f19 | head
+  111  ps -aux | grep user1 | awk -F' ' '{ print $0 }' 
+  112  ps -aux | grep user1 | awk -F' ' '{ print $1 }' 
+  113  ps -aux | grep user1 | awk -F' ' '{ print $10 }' 
+  114  ps -aux | grep user1 | awk -F' ' '{ print $11 }' 
+  115  ps -aux | grep user1 | awk -F' ' '{ print $1 $11 }' 
+  116  ps -aux | grep user1 | awk -F' ' '{ print $1" "$11 }' 
+  117  ps -aux | grep user1 | awk -F' ' '{ print $1","$11 }' 
+  118  ps -aux | awk -F' ' '{ print $1","$11 }'
+  119  ps -aux | awk -F' ' '$1 == user1 { print $1","$11 }'
+  120  ps -aux | awk -F' ' '$1 == "user1" { print $1","$11 }'
+  121  ps -aux | awk -F' ' '$1 == "user1" { print $1" "$11 }'
+  122  ps -aux | awk -F' ' '$1 == "user1 && $11 ~ usr" { print $1" "$11 }'
+  123  ps -aux | awk -F' ' '$1 == "user1" && $11 ~ "usr" { print $1" "$11 }'
+  124  ps -aux | awk -F' ' '$1 == "user1" && $11 ~ "/usr/bin" { print $1" "$11 }'
+  125  ls
+  126  grep -R bash *
+  127  ls
+  128  cd practica3/iso-unlp/shell-scripts-master
+  129  ls
+  130  cd ejercicios
+  131  ls
+  132  cd iso-bash2020
+  133  ls
+  134  touch comandos-hoy
+  135  history
