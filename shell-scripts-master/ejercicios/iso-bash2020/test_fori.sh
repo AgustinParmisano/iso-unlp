@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i; do
+for i in 1 2 3 4 5 ; do
 	echo $i
 	break
 done

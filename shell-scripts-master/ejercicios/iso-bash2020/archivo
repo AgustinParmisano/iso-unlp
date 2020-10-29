@@ -1,0 +1,1 @@
+(test -f archivo && grep menta archivo && echo Z) || echo Q
