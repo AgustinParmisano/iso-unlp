@@ -1,0 +1,53 @@
+Ejercicio shell scripting - T2
+
+Se tiene un archivo con el resultado histórico de una Loteria, el archivo está delimitado por
+comas (archivo adjunto 2013_2020.csv). Por favor analice imagen adjunta (loteria.jpg) para ver la estructura
+del archivo.
+
+Su script va a recibir un parámetro que debe ser un número y siempre mayor a 0.
+
+El parámetro representa la suma de valores para la combinación ganadora. La combinación ganadora
+son los números de las columnas 2 a la 7 inclusive. Tenemos que encontrar la cantidad de
+sorteos en los que la suma de los números de la combinación ganadora coincide con el parámetro recibido.
+
+Ademas debemos imprimir la fecha de la primer y ultima coincidencia que encontramos en el archivo
+(primera y última según el orden del archivo no en orden temporal)
+
+Por ejemplo si recibo
+180
+
+Debo Imprimir:
+
+3
+24/10/2020
+1/02/2018
+
+Explicación: Hay 3 combinaciones que sumados sus números dan 180, la primera del archivo corresponde
+al 24/10/2020 y la última al 18/10/2014.
+
+Otro Ejemplo:
+
+Si recibo:
+370
+Debo Imprimir
+0
+Explicación: No hay ninguna combinación ganadora cuya suma de números nos de 0
+
+Si recibo: X
+Debo Imprimir:
+INVALID PARAMETERS
+
+Explicación: El script debe recibir solo números
+
+Ayuda: a veces para sumar números en bash que comienzan con 0, (por ejemplo 09) nos pasa
+que el número se interpreta como octal y podemos tener un error, entonces hay que indicarle a bash
+que el numero es decimal. Por ejemplo si queremos sumar dos variables y almacenar su resultado en
+otra debemos hacerlo asi:
+
+let "sum = 10#$n1 + 10#$n2"
+
+Es imperativo y OBLIGATORIO que su script retorne los valores en el orden indicado y como se detallo anteriormente.
+
+No imprima cosas innecesarias por pantalla. En tal caso el resultado se considera inválido.
+
+El archivo adjunto con la solución debe llamarse SI O SI script.sh
