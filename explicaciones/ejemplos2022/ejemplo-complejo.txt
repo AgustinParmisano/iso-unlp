@@ -1,0 +1,1 @@
+for i in $(help | awk -F" " '{ print $1 }'); do find /bin/ -name $i ; done
