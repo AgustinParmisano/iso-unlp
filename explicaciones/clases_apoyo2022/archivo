@@ -1,0 +1,17 @@
+nada
+
+Orden «lsas» no encontrada. Quizá quiso decir:
+
+  la orden «lsar» del paquete deb «unar (1.10.1-2build7)»
+  la orden «lsns» del paquete deb «util-linux (2.34-0.1ubuntu9.3)»
+
+Pruebe con: sudo apt install <nombre del paquete deb>
+
+
+Orden «lsas» no encontrada. Quizá quiso decir:
+
+  la orden «lsns» del paquete deb «util-linux (2.34-0.1ubuntu9.3)»
+  la orden «lsar» del paquete deb «unar (1.10.1-2build7)»
+
+Pruebe con: sudo apt install <nombre del paquete deb>
+

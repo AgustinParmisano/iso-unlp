@@ -31,5 +31,18 @@ function error {
   return 5
 }
 
+sumar(){
+	result=$(($1 + $2))
+	echo $result
+	$1=$result
+}
+
+#a=5
+#b=9
+#sumar 5 9
+#sumar $a $b
+#echo $a
+#echo $b
+
 error
 echo "error devolvió un código de salida $?"
